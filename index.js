@@ -25,7 +25,7 @@ module.exports = function globalJsdom (html, options) {
     return global.document.destroy
   }
 
-  var jsdom = require('jsdom')
+  var jsdom = require('jsdom/lib/old-api.js')
   var document = jsdom.jsdom(html, options)
   var window = document.defaultView
 
